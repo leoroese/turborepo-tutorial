@@ -3,6 +3,7 @@
   "display": "Default",
   "compilerOptions": {
     "allowJs": true,
+    "baseUrl": "../../",
     "composite": false,
     "declaration": true,
     "declarationMap": true,
@@ -17,6 +18,12 @@
     "noEmit": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
+    "paths": {
+      "@ui/*": ["./packages/ui/*"],
+      "@next-app/*": ["./apps/next-app/*"],
+      "@next-next-app/*": ["./apps/next-next-app/*"],
+      "@server/*": ["./apps/server/*"]
+    },
     "preserveWatchOutput": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,

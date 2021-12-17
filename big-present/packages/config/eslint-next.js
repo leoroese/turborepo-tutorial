@@ -55,5 +55,5 @@ module.exports = {
       extends: ['plugin:testing-library/react', 'plugin:jest/recommended'],
     },
   ],
-  ignorePatterns: ['.eslintrc.js'],
+  ignorePatterns: ['.eslintrc.js', '**/*.config.js'],
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { Button } from 'ui'
+import { Button } from '@ui/Button'
 
 const Home = () => (
   <div className="flex flex-col items-center justify-center min-h-screen py-2">
