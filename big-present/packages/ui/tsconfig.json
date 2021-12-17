@@ -1,7 +1,5 @@
 {
-  "extends": "tsconfig/react-library.json",
-  "compilerOptions": {
-    "jsx": "react-jsx"
-  },
+  "extends": "tsconfig/nextjs.json",
+  "include": ["**/*.tsx"],
   "exclude": ["node_modules"]
 }

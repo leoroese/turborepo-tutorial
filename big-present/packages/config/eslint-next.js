@@ -18,8 +18,8 @@ module.exports = {
   settings: {
     next: {
       rootDir: [
-        'apps/docs/',
-        'apps/web/',
+        'apps/next-app/',
+        'apps/next-next-app/',
         'packages/ui/',
         'packages/config/',
         'packages/tsconfig/',
