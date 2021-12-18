@@ -1,11 +1,7 @@
 {
   "extends": "tsconfig/nextjs.json",
   "compilerOptions": {
-    "strict": false,
     "baseUrl": ".",
-    "paths": {
-      "@packages": ["../../packages/*"]
-    },
     "noEmit": true
   },
   "include": ["next-env.d.ts", "src/**/*", "styles/globals.css"],

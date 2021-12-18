@@ -7,7 +7,5 @@
     "noEmit": false,
     "module": "commonjs",
     "sourceMap": true
-  },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+  }
 }

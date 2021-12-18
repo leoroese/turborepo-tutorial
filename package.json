@@ -1,5 +1,5 @@
 {
-  "name": "turborepo-basic-shared",
+  "name": "turborepo-basic-yarn",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -8,17 +8,17 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "test": "turbo run test",
     "dev": "turbo run dev --parallel",
+    "test": "turbo run test",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky install"
   },
   "devDependencies": {
     "husky": "^7.0.4",
-    "lint-staged": "^12.1.2",
+    "lint-staged": "^12.1.3",
     "prettier": "^2.5.1",
-    "turbo": "latest"
+    "turbo": "*"
   },
   "turbo": {
     "pipeline": {
@@ -40,17 +40,15 @@
       }
     }
   },
-  "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=14.0.0"
-  },
   "lint-staged": {
     "apps/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "packages/ui/**/*.{js,ts,jsx,tsx}": [
       "eslint --fix"
     ],
     "*.json": [
       "prettier --write"
     ]
-  },
-  "dependencies": {}
+  }
 }

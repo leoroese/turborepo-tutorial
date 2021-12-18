@@ -1,5 +1,4 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
   env: {
     node: true,
   },
@@ -18,6 +17,9 @@ module.exports = {
     project: ['./tsconfig.json'],
   },
   settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts'],
+    },
     'import/resolver': {
       node: {
         extensions: ['.js', '.ts'],
@@ -31,7 +33,6 @@ module.exports = {
   },
   overrides: [
     {
-      // 3) Now we enable eslint-plugin-testing-library rules or preset only for matching files!
       env: {
         jest: true,
       },
