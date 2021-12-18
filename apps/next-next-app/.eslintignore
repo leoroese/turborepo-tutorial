@@ -1,0 +1,6 @@
+node_modules
+**/*.js
+dist
+.turbo
+.next
+public
