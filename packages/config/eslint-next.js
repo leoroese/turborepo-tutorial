@@ -47,6 +47,7 @@ module.exports = {
         namedComponents: 'arrow-function',
       },
     ],
+    '@next/next/no-html-link-for-pages': ['error', './src/pages/'],
   },
   overrides: [
     {
