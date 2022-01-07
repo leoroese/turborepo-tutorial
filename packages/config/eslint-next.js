@@ -31,11 +31,11 @@ module.exports = {
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        project: ['tsconfig.json', 'package/tsconfig.json'],
+        moduleDirectory: ['node_modules', 'src/'],
       },
       typescript: {
         alwaysTryTypes: true,
-        project: ['tsconfig.json', 'package/tsconfig.json'],
+        project: '.',
       },
     },
   },
@@ -47,6 +47,7 @@ module.exports = {
         namedComponents: 'arrow-function',
       },
     ],
+    '@next/next/no-html-link-for-pages': ['error', './src/pages/'],
   },
   overrides: [
     {
@@ -55,7 +56,18 @@ module.exports = {
         jest: true,
       },
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
-      extends: ['plugin:testing-library/react', 'plugin:jest/recommended'],
+      extends: [
+        'plugin:testing-library/react',
+        'plugin:testing-library/dom',
+        'plugin:jest-dom/recommended',
+        'plugin:jest/recommended',
+      ],
+      rules: {
+        'import/no-extraneous-dependencies': [
+          'off',
+          { devDependencies: ['**/?(*.)+(spec|test).[jt]s?(x)'] },
+        ],
+      },
     },
   ],
   ignorePatterns: [

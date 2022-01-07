@@ -1,9 +1,0 @@
-{
-  "extends": "tsconfig/nextjs.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "noEmit": true
-  },
-  "include": ["next-env.d.ts", "src/**/*", "styles/globals.css"],
-  "exclude": ["node_modules", ".next", ".turbo"]
-}
