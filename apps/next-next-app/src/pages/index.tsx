@@ -30,7 +30,7 @@ const Home = () => (
         >
           <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
           <p className="mt-4 text-xl">
-            Find in-depth information about Next.js features and API Bruv.
+            Find in-depth information about Next.js features and API.
           </p>
         </a>
 

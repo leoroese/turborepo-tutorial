@@ -29,9 +29,6 @@ jobs:
           node-version: '14'
           registry-url: https://registry.npmjs.org/
 
-      - name: Change to next-next-app directory
-        run: cd apps/next-next-app
-
       - name: 'Deploy to Vercel'
         run: |
           prodRun=""
