@@ -25,7 +25,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: Change to server directory
-        run: cd apps/server
-      - run: yarn build
-      - run: yarn test
+      - name: Build
+        working-directory: ./apps/server
+        run: yarn build
+      - name: Test
+        working-directory: ./apps/server
+        run: yarn test

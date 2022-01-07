@@ -18,6 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     name: 'Deploy next-next-app frontend'
 
+    defaults:
+      run:
+        working-directory: ./apps/next-next-app
+
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
