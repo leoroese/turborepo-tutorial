@@ -17,6 +17,10 @@ jobs:
       matrix:
         node-version: [14.x]
 
+    defaults:
+      run:
+        working-directory: ./apps/server
+
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
@@ -26,8 +30,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build
-        working-directory: ./apps/server
         run: yarn build
       - name: Test
-        working-directory: ./apps/server
         run: yarn test
