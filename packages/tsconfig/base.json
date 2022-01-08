@@ -19,6 +19,7 @@
     "preserveWatchOutput": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "typeRoots": ["../../node_modules/@types"]
   }
 }

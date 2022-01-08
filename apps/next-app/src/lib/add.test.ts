@@ -1,4 +1,5 @@
-import add from '@src/lib/add'
+
+import add from './add'
 
 describe('testing add', () => {
   it('should be 3', () => {

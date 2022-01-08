@@ -6,7 +6,6 @@
   "files": [
     "eslint-next.js",
     "eslint-server.js",
-    "jest-common.js",
     "jest-next.js",
     "jest-server.js"
   ],
