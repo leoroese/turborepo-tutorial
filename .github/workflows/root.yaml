@@ -2,7 +2,7 @@ name: 'root'
 
 on:
   push:
-    branches: [part2]
+    branches: [main, part2Start-example]
   pull_request:
     branches: [main]
 
