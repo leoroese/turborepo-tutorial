@@ -2,7 +2,7 @@ name: 'server'
 
 on:
   push:
-    branches: [main, part2Start, part2Start-example]
+    branches: [main, part2Start-example]
     paths:
       - 'apps/server/**'
       - '.github/workflow/server.yaml'
