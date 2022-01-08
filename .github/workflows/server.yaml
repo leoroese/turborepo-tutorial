@@ -30,6 +30,8 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build
+        working-directory: ./apps/server
         run: yarn build
       - name: Test
+        working-directory: ./apps/server
         run: yarn test
