@@ -6,7 +6,7 @@
   "files": [
     "eslint-next.js",
     "eslint-server.js",
-    "jest-next.js"
+    "jest-next.js",
     "jest-server.js"
   ],
   "dependencies": {
