@@ -9,6 +9,5 @@ module.exports = {
     '^.+\\.jsx?$': 'esbuild-jest',
   },
   coveragePathIgnorePatterns: [],
-  collectCoverageFrom: ['**/src/**/*.{js,ts,jsx,tsx}'],
   coverageThreshold: null,
 }
