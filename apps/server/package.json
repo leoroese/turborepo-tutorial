@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "rm -rf dist && yarn build && nodemon ./dist/src/index.js",
     "build": "tsc",
-    "test": "echo \"Server tests\"",
+    "test": "jest --coverage",
     "lint": "eslint src --fix"
   },
   "keywords": [],

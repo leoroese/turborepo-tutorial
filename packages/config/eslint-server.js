@@ -38,7 +38,13 @@ module.exports = {
       },
       files: ['**/__tests__/**/*.[jt]s', '**/?(*.)+(spec|test).[jt]s'],
       extends: ['plugin:jest/recommended'],
+      rules: {
+        'import/no-extraneous-dependencies': [
+          'off',
+          { devDependencies: ['**/?(*.)+(spec|test).[jt]s'] },
+        ],
+      },
     },
   ],
-  ignorePatterns: ['**/*.js', 'node_modules', '.turbo', 'dist'],
+  ignorePatterns: ['**/*.js', 'node_modules', '.turbo', 'dist', 'coverage'],
 }

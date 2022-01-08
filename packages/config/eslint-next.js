@@ -16,15 +16,6 @@ module.exports = {
   ],
   plugins: ['import', '@typescript-eslint'],
   settings: {
-    next: {
-      rootDir: [
-        'apps/next-app/',
-        'apps/next-next-app/',
-        'packages/ui/',
-        'packages/config/',
-        'packages/tsconfig/',
-      ],
-    },
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
@@ -56,6 +47,12 @@ module.exports = {
       },
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:testing-library/react', 'plugin:jest/recommended'],
+      rules: {
+        'import/no-extraneous-dependencies': [
+          'off',
+          { devDependencies: ['**/?(*.)+(spec|test).[jt]s?(x)'] },
+        ],
+      },
     },
   ],
   ignorePatterns: [
@@ -65,5 +62,6 @@ module.exports = {
     '.turbo',
     '.next',
     'public',
+    'coverage',
   ],
 }
