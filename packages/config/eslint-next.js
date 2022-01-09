@@ -3,11 +3,27 @@ module.exports = {
     browser: true,
     node: true,
   },
-  extends: ['next', 'airbnb', 'airbnb-typescript', 'prettier'],
+  extends: [
+    'next',
+    'airbnb',
+    'airbnb-typescript',
+    'plugin:import/typescript',
+    'prettier',
+  ],
   plugins: ['@typescript-eslint', 'import'],
   settings: {
     next: {
       rootDir: ['apps/*/', 'packages/*/'],
+    },
+    settings: {
+      'import/resolver': {
+        typescript: {
+          project: ['tsconfig.json', 'package/tsconfig.json'],
+        },
+        node: {
+          project: ['tsconfig.json', 'package/tsconfig.json'],
+        },
+      },
     },
   },
   rules: {
