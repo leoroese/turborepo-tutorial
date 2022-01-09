@@ -3,42 +3,24 @@ module.exports = {
     browser: true,
     node: true,
   },
-  extends: [
-    'next/core-web-vitals',
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'airbnb',
-    'airbnb-typescript',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:import/typescript',
-    'prettier',
-  ],
-  plugins: ['import', '@typescript-eslint'],
+  extends: ['next', 'airbnb', 'airbnb-typescript', 'prettier'],
+  plugins: ['@typescript-eslint', 'import'],
   settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        moduleDirectory: ['node_modules', 'src/'],
-      },
-      typescript: {
-        alwaysTryTypes: true,
-        project: '.',
-      },
+    next: {
+      rootDir: ['apps/*/', 'packages/*/'],
     },
   },
   rules: {
-    'no-console': 2,
+    // react
     'react/function-component-definition': [
       2,
       {
         namedComponents: 'arrow-function',
       },
     ],
-    '@next/next/no-html-link-for-pages': ['error', './src/pages/'],
+
+    // next
+    '@next/next/no-html-link-for-pages': 'off',
   },
   overrides: [
     {
@@ -60,9 +42,11 @@ module.exports = {
     '**/*.js',
     '**/*.json',
     'node_modules',
-    '.turbo',
-    '.next',
     'public',
+    'styles',
+    '.next',
     'coverage',
+    'dist',
+    '.turbo',
   ],
 }

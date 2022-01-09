@@ -1,7 +1,8 @@
 import React from 'react'
+
+import HelloWorld from '@src/components/HelloWorld'
 import Head from 'next/head'
 import { CoolInterface } from 'server/src/lib/CoolInterface'
-import HelloWorld from '../components/HelloWorld'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const coolKid: CoolInterface = {

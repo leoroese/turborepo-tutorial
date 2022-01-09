@@ -1,6 +1,7 @@
 import React from 'react'
+
+import HelloWorld from '@src/components/HelloWorld'
 import { render, screen } from '@testing-library/react'
-import HelloWorld from './HelloWorld'
 
 describe('tests', () => {
   it('should', () => {
